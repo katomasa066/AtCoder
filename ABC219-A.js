@@ -33,3 +33,7 @@ if (number >= 90){
 }
 
 main(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
+
+
+
