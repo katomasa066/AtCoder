@@ -1,7 +1,7 @@
 'use strict'
-function Main(input) 
+function Main(input) {
 const number = input
-
+}
 Main(require('fs').readFileSync('/dev/stdin', 'utf8'))
 
 
@@ -31,3 +31,35 @@ function Main(input) {
 }
 //*この行以降は編集しないでください（標準入出力から一度に読み込み、Mainを呼び出します）
 Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+
+
+
+
+
+const numberList = '1,2,3'
+
+// 普通にsplitすると文字列型の配列で返る
+numberList.split(',')
+// => ["1", "2", "3"]
+
+// 下記のようにやると、数値型の配列で返る
+numberList.split(',').map(Number)
+// =>  [1, 2, 3]
+
+
+
+//↓↓原理
+numberList.split(',').map(n => {
+    return Number(n)
+
+
+})
+
+// 引数で渡した文字を数値に変換して +1 して返す関数
+const inc = n => {
+    return Number(n) + 1
+}
+
+numberList.split(',').map(inc)
+[2, 3, 4]
