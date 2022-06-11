@@ -1,6 +1,14 @@
-function main(input) {
-    const h = Number(input);
-
+"use strict"
+function Main(input) {
+    const num = input.trim().split(" ");
+    let disp = 0;
     
+
+    for (let i = 0; i < 3; i++) {
+        disp = num[disp];
+    }
+
+    console.log(disp);
+
 }
-main(require("fs").readFileSync("/dev/stdin", "utf8"));
+Main(require("fs").readFileSync("/dev/stdin", "utf8"));
